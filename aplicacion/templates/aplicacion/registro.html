@@ -1,0 +1,17 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Registro
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>Registro</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Crear usuario">
+    </form>
+{% endblock contenido %}
